@@ -1,0 +1,18 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Files</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="#file of files" (click)="itemTapped($event, file)">
+            <ion-thumbnail item-left>
+                <img src="{{file.thumb_src}}"/>
+            </ion-thumbnail>
+            <h2>{{file.post_title}}</h2>
+            <p>{{file.extension}}, {{file.filesize}} ∙ {{file.post_date}}</p>
+        </button>
+    </ion-list>
+</ion-content>
