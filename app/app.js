@@ -3,13 +3,15 @@ import {WelcomePage} from './pages/welcome/welcome';
 import {PropertyListPage} from './pages/property-list/property-list';
 import {BrokerListPage} from './pages/broker-list/broker-list';
 import {FavoriteListPage} from './pages/favorite-list/favorite-list';
+import {FileListPage} from './pages/file-list/file-list';
 import {PropertyService} from './services/property-service';
 import {BrokerService} from './services/broker-service';
+import {FilesService} from './services/file-service';
 
 @App({
     templateUrl: 'build/app.html',
     config: {},
-    providers: [PropertyService, BrokerService]
+    providers: [PropertyService, BrokerService, FilesService]
 })
 class MyApp {
 
@@ -28,6 +30,7 @@ class MyApp {
         this.pages = [
             {title: 'Welcomes', component: WelcomePage, icon: "bookmark"},
             {title: 'Properties', component: PropertyListPage, icon: "home"},
+            {title: 'Files', component: FileListPage, icon: "home"},
             {title: 'Brokers', component: BrokerListPage, icon: "people"},
             {title: 'Favorites', component: FavoriteListPage, icon: "star"}
         ];

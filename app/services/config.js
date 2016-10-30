@@ -5,3 +5,4 @@ function isHeroku()
 }
 
 export let SERVER_URL = isHeroku() ? "/" : "http://localhost:5000/";
+export let FILES_URL    = 'http://theproductionarea.net/wp-json/nmfiles/v1/get-files';
